@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+ 
+
+.logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+.content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.big-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.panel:hover {
+    transform: scale(1.05);
+}
+
+.panel h1, .panel h3 {
+    position: absolute;
+    bottom: -50px; /* Initially hide text */
+    left: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    color: #fff;
+    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.panel.active h1, .panel.active h3 {
+    opacity: 1;
+    bottom: 0;
+}
+
+
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+}
+.slide-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px *9));
+    }
+}
+
+.slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img {
+    width: 100%;
+    transition: transform 1s;
+}
+
+img:hover {
+    transform: translateZ(20px);
+}
+
+/* GRADIENT SHADOWS */
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slide::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #b88f60f6;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+footer {
+    background-color: #be805d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

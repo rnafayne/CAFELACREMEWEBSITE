@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to cafe la creme</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5dc;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #5f4b30;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, h2 {
+            color: #5f4b30;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav {
+            background-color: #bca18c;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            background-color: #5f4b30;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #5f4b30;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .profile {
+            flex: 1 1 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #cab08f;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile h2 {
+            color: #5f4b30;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .profile ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .profile ul li {
+            margin-bottom: 5px;
+        }
+
+        .bio {
+            flex: 2 1 600px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #cab08f;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio h1 {
+            color: #3b291f;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .bio p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #5f4b30;
+            text-align: center;
+            padding: 10px 0;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile, .bio {
+                width: 100%;
+            }
+        }
+          /* Icon styles */
+          .menu-icon {
+            display: inline-block;
+            width: 100px; /* Adjust size of icons */
+            height: 100px; /* Adjust size of icons */
+            border-radius: 100%; /* Make icons circular */
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px; /* Adjust spacing between icons */
+        }
+
+        .menu-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* Ensure image also conforms to circle */
+        }
+    
+            .p1 {
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+        
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="image/LOGO.jpg" alt="Header Image">
+</header>
+
+<div class="container">
+<h1 class="page-title">ABOUT US</h1>
+<h2 class="page-title">Café La Crème Coffee</h2>
+<center>
+<table class="menu-table">
+    <tr>
+        <td class="menu-icon"><a href="index.html"><img src='image/home.jpg' alt='HOME'></a></td>
+        <td class="menu-icon"><a href="ourcoffee.html"><img src='image/ourcoffee.jpg' alt='Our Coffee'></a></td>
+        <td class="menu-icon"><a href="gallery.html"><img src='image/gallery.jpg' alt='Gallery'></a></td>
+        <td class="menu-icon"><a href="organization.html"><img src='image/organization.jpg' alt='Organization'></a></td>
+        <td class="menu-icon"><a href="career.html"><img src='image/career.jpg' alt='Careers'></a></td>
+        <td class="menu-icon"><a href="event.html"><img src='image/event.jpg' alt='Event'></a></td>
+        <td class="menu-icon"><a href="location.html"><img src='image/location.jpg' alt='Location'></a></td>
+        <td class="menu-icon"><a href="contact.html"><img src='image/contact.jpg' alt='Contact Us'></a></td>
+        <td class="menu-icon"><a href="faq.html"><img src='image/faq.jpg' alt='FAQ'></a></td>
+    </center>
+
+    </tr>
+</table>
+
+
+<section>
+    <div class="profile">
+        <h2>Profile</h2>
+        <p><b>Name:</b> Café La Crème</p>
+        <p><b>LOCATION:</b> Lot 3.5, Central Market Annexe, Hang Kasturi Street, 50050 Kuala Lumpur.</p>
+        <p><b>DATE OF COMMENCEMENT:</b> 5 December 2023</p>
+   
+        
+    </div>
+
+    <div class="bio">
+        <h1><p class="p1"> ABOUT US </p></h1>
+        <p><b>Café La Crème coffee shop</b> is the coffee shop that offers unique coffees from different countries such as Colombia, Vietnam, Indonesia, and Malaysia. Café La Crème is known as
+            a local coffee shop that was established since 2020. We get our coffee stocks from overseas. For now, we only focus on serving coffee to our beloved customers at our coffee shop. Our coffee is unique because it is hard to find in other coffee shops.
+            </p>
+<br> 
+            <p> The name chosen for our company name is Café La Crème. We chose this name for our company because Café La Crème means 'espresso coffee with milk'. We want everyone to
+                know that this is a coffee shop, but we also added a slightly unique name. In addition, we also want everyone to remember our coffee shop because of the uniqueness and beauty of this name. This can indirectly attract many customers to our coffee shop</p>
+            </br>
+            <br>
+            <h3> Objective: </h3>
+
+            <center>To build a strong work ethic, dependable, positive attitude, self-motivated and team oriented characteristics in workers. </center>
+        </br>
+            <br>
+            <h3> Our Vission: </h3>
+
+            <center> To give a chill and relaxing environment but still have professionalism </center>
+        </br>
+
+        <br>
+            <h3> Our Mission: </h3>
+            <p>
+                <ol type="1">
+                    <li style="list-style-position: inside;">  To create a positive, friendly and safe working environment in the company. </li>
+                    <li style="list-style-position: inside;">  Cost of management will be more affordable. </li>
+                    <li style="list-style-position: inside;">  To engage each employee in the continuous improvement of our business by recognizing their success and by rewarding them with increased responsibility and authority. </li>
+                </ol>
+            </br>
+            </div>
+</section>
+
+<footer>
+    <p>2024 Cafe La Crème's Page. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

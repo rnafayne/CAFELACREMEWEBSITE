@@ -1,0 +1,352 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Gallery - Café La Crème</title> 
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <style> 
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #fbf8f5; /* Creamy background */ 
+            color: #4d3d36; /* Coffee brown text */ 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            background-image: linear-gradient(120deg, #faf7f5, #fbf8f5); /* Soft gradient background */ 
+        } 
+ 
+        .header-container { 
+            background-color: #ac8f6d; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+        } 
+ 
+        .header-container h1 { 
+            margin: 0; 
+            font-size: 2.5em; 
+        } 
+ 
+        .header-container nav ul { 
+            list-style-type: none; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+        } 
+ 
+        .header-container nav ul li { 
+            display: inline; 
+        } 
+ 
+        .header-container nav ul li a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600; 
+        } 
+ 
+        .welcome-message { 
+            text-align: center; 
+            padding: 40px 20px; 
+            background-color: #fff0e1; 
+            color: #4d3d36; 
+            margin: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */ 
+        } 
+ 
+        .gallery-container { 
+            padding: 20px; 
+        } 
+ 
+        .gallery-container h2 { 
+            color: #987456; /* Custom color for headings */ 
+            font-weight: 600; /* Bold headings */ 
+            text-align: center; 
+        } 
+ 
+        .gallery { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+        } 
+ 
+        .gallery-item img { 
+            width: 300px; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 10px; 
+        } 
+ 
+        .experience-section { 
+            position: relative; 
+            text-align: center; 
+            color: white; 
+            margin: 20px 0; 
+        } 
+ 
+        .experience-section img { 
+            width: 100%; 
+            height: auto; 
+            max-height: 400px; /* Limit the height */ 
+            object-fit: cover; /* Maintain aspect ratio */ 
+        } 
+ 
+        .experience-section .overlay { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+        } 
+ 
+        .experience-section .overlay h2 { 
+            font-size: 2em; 
+            margin: 0 0 10px; 
+        } 
+ 
+        .experience-section .overlay p { 
+            margin: 0 0 20px; 
+        } 
+ 
+        .experience-section .overlay .btn { 
+            background-color: #805e43; /* Custom color for button */ 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600; 
+        } 
+ 
+        .experience-section .overlay .btn:hover { 
+            background-color: #604a32; /* Darker shade on hover */ 
+        } 
+ 
+        .menu-container { 
+            padding: 20px; 
+            background-color: #fff0e1; /* Light cream background */ 
+            border-radius: 20px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */ 
+            margin: 20px; 
+        } 
+ 
+        .menu-container h2 { 
+            color: #987456; /* Custom color for headings */ 
+            font-weight: 600; /* Bold headings */ 
+            text-align: center; 
+            position: relative; 
+        }
+        .menu-container h2::before, .menu-container h2::after { 
+            content: ""; 
+            width: 50px; 
+            height: 2px; 
+            background-color: #987456; 
+            position: absolute; 
+            top: 50%; 
+            transform: translateY(-50%); 
+        } 
+ 
+        .menu-container h2::before { 
+            left: -60px; 
+        } 
+ 
+        .menu-container h2::after { 
+            right: -60px; 
+        } 
+ 
+        .menu { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+        } 
+ 
+        .menu-section { 
+            background-color: white; 
+            border: 1px solid #ddd; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            padding: 20px; 
+            width: 300px; 
+            position: relative; 
+            overflow: hidden; 
+        } 
+ 
+        .menu-section h3 { 
+            color: #4d3d36; /* Coffee brown text */ 
+            font-weight: 600; 
+            margin-top: 0; 
+            position: relative; 
+        } 
+ 
+        .menu-section h3::before { 
+            content: "🍃"; 
+            position: absolute; 
+            left: -40px; 
+            font-size: 2em; 
+        } 
+ 
+        .menu-section h3::after { 
+            content: "🍃"; 
+            position: absolute; 
+            right: -40px; 
+            font-size: 2em; 
+        } 
+ 
+        .menu-section ul { 
+            list-style-type: none; 
+            padding: 0; 
+        } 
+ 
+        .menu-section ul li { 
+            padding: 10px 0; 
+            border-bottom: 1px solid #eee; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            font-size: 1.1em; 
+        } 
+ 
+        .menu-section ul li:last-child { 
+            border-bottom: none; 
+        } 
+ 
+        footer { 
+            background-color: #ac8f6d; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+        } 
+ 
+        /* Fade-in animation */ 
+        @keyframes fadeIn { 
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            } 
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            } 
+        } 
+ 
+        .animated-text { 
+            opacity: 0; 
+            animation: fadeIn 1s forwards; 
+        } 
+ 
+        .animated-text.visible { 
+            animation: fadeIn 1s forwards; 
+        } 
+    </style> 
+</head>
+<body> 
+    <header> 
+        <div class="header-container"> 
+            <h1 class="animated-text">Café La Crème</h1> 
+            <nav> 
+                <ul> 
+                    <li><a href="index.html" target="_blank">Home</a></li>  
+                    <li><a href="aboutus.html" target="_blank">About Us</a></li>  
+                    <li><a href="ourcoffee.html" target="_blank">Our Coffee</a></li>  
+                    <li><a href="organization.html" target="_blank">Organization</a></li>  
+                    <li><a href="contact.html" target="_blank">Contact Us</a></li>  
+                    <li><a href="Careers.html">Careers</a></li>  
+                    <li><a href="location.html">Location</a></li>  
+                    <li><a href="event.html">Events</a></li>  
+                    <li><a href="faq.html">FAQ</a></li> 
+                </ul> 
+            </nav> 
+        </div> 
+    </header> 
+     
+    <div class="welcome-message animated-text"> 
+        <h2>Welcome to Café La Crème!</h2> 
+        <p>Discover our world of exquisite coffee and delightful treats. Browse our gallery to experience the ambiance and charm of our café.</p> 
+    </div> 
+ 
+    <div class="gallery-container"> 
+        <h2 class="animated-text">Gallery</h2> 
+        <div class="gallery"> 
+            <div class="gallery-item"> 
+                <img src="image/cafe1.pic" alt="Image 1"> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="image/cafe2.pic" alt="Image 2"> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="image/cafe3.pic" alt="Image 3"> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="image/seat.pic" alt="Image 4"> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="image/caf5.pic.jpg" alt="Image 5"> 
+            </div> 
+            <div class="gallery-item"> 
+                <img src="image/cafe6.pic.jpg" alt="Image 6"> 
+            </div>  
+        </div> 
+    </div> 
+ 
+    <div class="experience-section"> 
+        <img src="image/bakery and coffee.jpg" alt="Latte Art Experience"> 
+        <div class="overlay"> 
+            <h2>Live, Laugh, Love, Latte</h2> 
+            <p>Coffee is not a choice, Coffee is a lifestyle.</p> 
+        </div> 
+    </div> 
+ 
+    <div id="menu" class="menu-container"> 
+        <h2 class="animated-text">Best Sellers</h2> 
+        <div class="menu"> 
+            <div class="menu-section"> 
+                <h3 class="animated-text">Coffee</h3> 
+                <ul> 
+                    <li>Ice Caramel Macchiato ☕️</li> 
+                    <li>Matcha Latte 🍵</li> 
+                    <li>Ice Cappuccino 🧊</li> 
+                </ul> 
+            </div> 
+            <div class="menu-section"> 
+                <h3 class="animated-text">Non Coffee</h3> 
+                <ul> 
+                    <li>Cookies Cream 🍪</li> 
+                    <li>Lychee Juicy Punch Drink 🍹</li> 
+                    <li>Lemonade Peach Sparkling 🍑</li> 
+                </ul> 
+            </div> 
+        </div> 
+    </div> 
+     
+    <footer> 
+        <div class="footer-container"> 
+            <p>© 2024 Café La Crème. All rights reserved.</p> 
+        </div> 
+    </footer> 
+ 
+    <script> 
+        document.addEventListener('DOMContentLoaded', () => { 
+            const animatedTexts = document.querySelectorAll('.animated-text'); 
+            const observer = new IntersectionObserver(entries => { 
+                entries.forEach(entry => { 
+                    if (entry.isIntersecting) { 
+                        entry.target.classList.add('visible'); 
+                    } else { 
+                        entry.target.classList.remove('visible'); 
+                    } 
+                }); 
+            }, { 
+                threshold: 0.1 // Adjust this value to trigger animation earlier or later 
+            }); 
+ 
+            animatedTexts.forEach(text => { 
+                observer.observe(text); 
+            }); 
+        }); 
+    </script> 
+</body> 
+</html>
